@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Course materials, slides, code examples and references." />
+  <title>Creative Technologies – Course Materials</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- =========================
+       THEME TOGGLE (no JS)
+       ========================= -->
+  <!--
+    Explanation:
+    The checkbox #theme-toggle is visually turned into a toggle in CSS.
+    When it's checked, we apply .theme-dark to <body> using :has().
+    :has() is supported in all modern browsers including Safari 17+, Firefox 121+, Chrome 105+.
+
+    Fallback:
+    If a browser doesn't support :has(), it will just stay in light mode.
+  -->
+  <input type="checkbox" id="theme-toggle" class="visually-hidden" />
+  <div class="topbar-wrapper">
+    <div class="topbar container">
+      <label class="theme-switch" for="theme-toggle">
+        <span class="theme-label">
+          <span class="theme-light-label">☀︎ Light</span>
+          <span class="theme-dark-label">☾ Dark</span>
+        </span>
+        <span class="theme-slider" aria-hidden="true"></span>
+      </label>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="headline">Mechanisms of Control</h1>
+      <p class="subheadline">UdK Berlin / Winter Semester 2025/26</p>
+
+      <div class="course-intro card">
+        <h2>What is it about?</h2>
+        <p>
+         An experience- and skill-building class focused on learning to design custom mechanisms and software for art projects. 
+         Inspired by technologies that manipulate and control objects around us, participants will create their own instruments and machines. 
+         Through hands-on lessons involving physical computing (Arduino) and coding, we’ll develop prototypes that encourage reflection on 
+         what control means. Together, we’ll explore blending machine precision with creativity, enabling you to craft artful devices.
+        </p>
+        <p>
+          Below you’ll find the slide decks, demo codes, and
+          references of our weekly sessions. All content is for study use only.
+        </p>
+      </div>
+
+      <!-- =========================
+           TABLE OF CONTENTS
+           ========================= -->
+      <nav class="toc card">
+        <h2 class="toc-title">Table of Contents</h2>
+        <ol class="toc-list">
+          <!-- Just add a new <li><a href="#week-XX">...</a></li> for each new week -->
+          <li><a href="#week-01">Week 01 — Intro to Arduino</a></li>
+          <li><a href="#week-02">Week 02 — From Electrons to Expression</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+
+    <!-- ========== WEEK BLOCK EXAMPLE ========== -->
+    <section class="week-block" id="week-01">
+      <div class="week-header">
+        <div>
+          <h2 class="week-title">Week 01 — Intro to Arduino</h2>
+          <p class="week-date">October 22, 2025</p>
+        </div>
+        <span class="week-tag">Basics</span>
+      </div>
+
+      <p class="week-summary">
+        We talked about the basics of Arduino, got an introduction to what Arduino is,
+        how we can use it for artistic and design projects. We looked at the basic blink-Example 
+        and how to write a non-blocking version of it to be able to "do something else while the LED blinks".
+      </p>
+
+      <ul class="resource-list">
+        <li class="resource-item">
+          <span class="resource-label">Slides:</span>
+          <a href="week01/01a_Intro_to_Arduino/index.html" class="resource-link">
+            Lecture deck (HTML)
+          </a>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">recap PDF:</span>
+          <a href="week01/01b_Recap_Introduction-to-Arduino.pdf" class="resource-link">
+            Recap Slides (PDF)
+          </a>
+        </li>    
+
+        <li class="resource-item">
+          <span class="resource-label">Code:</span>
+          <a href="week01/MoC_Week01_Example_Codes.zip" class="resource-link">
+            Arduino examples (ZIP)
+          </a>
+          <span class="resource-note">non-blocking blink, analogRead for LED Brightness</span>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Example artwork:</span>
+          <a href="https://karstenschuhl.com/superpose" class="resource-link" target="_blank" rel="noopener">
+            superpose - sound installation by Karsten Schuhl
+          </a>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Extra reading:</span>
+          <a href="https://docs.arduino.cc/learn/starting-guide/getting-started-arduino/" class="resource-link" target="_blank" rel="noopener">
+            Getting Started with Arduino
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- ========== END WEEK BLOCK EXAMPLE ========== -->
+
+
+    <!-- ========== DUPLICATE FROM HERE FOR NEW WEEKS ========== -->
+    <section class="week-block" id="week-02">
+      <div class="week-header">
+        <div>
+          <h2 class="week-title">Week 02 — From Electrons to Expression</h2>
+          <p class="week-date">October 29, 2025</p>
+        </div>
+        <span class="week-tag">Core Concepts</span>
+      </div>
+
+      <p class="week-summary">
+        We talked about how electrons move, what voltage and current mean
+        physically, why resistance matters, and how microcontrollers “see”
+        analog vs. digital signals. We also looked at how this translates
+        into artistic control (light, motion, potentially sound).
+      </p>
+
+      <ul class="resource-list">
+        <li class="resource-item">
+          <span class="resource-label">Slides:</span>
+          <a href="week02/02_From-Electrons-to-Expression/index.htm" class="resource-link">
+            Lecture deck (HTML)
+          </a>
+        </li>
+        
+        <li class="resource-item">
+          <span class="resource-label">Student Exploration Tasks:</span>
+          <a href="week02/MechOfControl_02_Analog-Digital_HandsOn_Tasks.pdf" class="resource-link">
+            Analog vs. Digital Hands on Tasks (PDF)
+          </a>
+          <span class="resource-note">Using switche & potentiometers to control LEDs</span>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Example artwork:</span>
+          <a href="https://lukaszerbst.com/portfolio/follow-me-blindly/" class="resource-link" target="_blank" rel="noopener">
+            Follow me blindly by Lukas Zerbst
+          </a>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Extra reading:</span>
+          <a href="https://docs.arduino.cc/learn/microcontrollers/analog-output/" class="resource-link" target="_blank" rel="noopener">
+            Basics of PWM (Pulse Width Modulation)
+          </a>
+        </li> 
+      </ul>
+    </section>
+    <!-- ========== END DUPLICATE BLOCK ========== -->
+
+
+    <!-- ========== RESOURCES / POLICIES / CONTACT ========== -->
+    <section class="meta-block card">
+      <h2>General resources</h2>
+      <ul class="flat-list">
+        <li>
+          <a href="https://www.arduino.cc/reference/en/" target="_blank" rel="noopener">
+            Arduino Language Reference
+          </a>
+        </li>
+        <li>
+          <a href="https://processing.org/reference/" target="_blank" rel="noopener">
+            Processing Reference
+          </a>
+        </li>
+        <li>
+          <a href="https://learn.sparkfun.com/tutorials" target="_blank" rel="noopener">
+            SparkFun Tutorials (electronics basics)
+          </a>
+        </li>
+      </ul>
+
+      <h3>Usage / policy</h3>
+      <p class="smallprint">
+        All material is provided for course learning. Please credit sources if
+        you reuse material publicly. Commercial use is not permitted without
+        permission.
+      </p>
+
+      <h3>Contact</h3>
+      <p class="smallprint">
+        Questions, missing files, or broken links:
+        <span class="nowrap">mail@karstenschuhl.com</span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="smallprint">
+        © 2025 Karsten Schuhl / New Media Class - UdK Berlin - Department Visual Communication.
+        Hosted on GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ===========================================================
+       NEW WEEK TEMPLATE
+       Copy/paste this block ABOVE the meta-block section.
+       Update the id, title, date, summary, and links.
+       Also add the new week to the TOC <ol> in the header.
+       ===========================================================
+
+    <section class="week-block" id="week-XX">
+      <div class="week-header">
+        <div>
+          <h2 class="week-title">Week XX — TITLE OF SESSION</h2>
+          <p class="week-date">DATE HERE</p>
+        </div>
+        <span class="week-tag">THEME / TAG</span>
+      </div>
+
+      <p class="week-summary">
+        Short description of what we covered. What concepts matter and why
+        they connect to design practice.
+      </p>
+
+      <ul class="resource-list">
+        <li class="resource-item">
+          <span class="resource-label">Slides:</span>
+          <a href="weekXX_slides.html" class="resource-link">
+            Lecture deck (HTML)
+          </a>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Code:</span>
+          <a href="weekXX_examples.zip" class="resource-link">
+            In-class examples (ZIP)
+          </a>
+          <span class="resource-note">what’s inside the ZIP</span>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Example artwork:</span>
+          <a href="https://example.com/some-project" class="resource-link" target="_blank" rel="noopener">
+            Reference project / artwork / paper
+          </a>
+        </li>
+
+        <li class="resource-item">
+          <span class="resource-label">Extra reading:</span>
+          <a href="https://example.com/background-reading" class="resource-link" target="_blank" rel="noopener">
+            Background reading
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  ============================================================ -->
+
+</body>
+</html>
