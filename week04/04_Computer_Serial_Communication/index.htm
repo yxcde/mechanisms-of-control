@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/tokyo.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<style>
+:root{
+--logo: ;
+--darkaccent1color: ;
+--lightaccent1color: ;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #ffffff;
+--darktitletextcolor: #000000;
+--lightbodytextcolor: #ffffff;
+--darkbodytextcolor: #000000;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: system-ui;
+--titlefont: system-ui;
+--lightframecolor: #FFFFFF;
+--darkframecolor: #000000;
+} 
+
+</style>
+</head>
+<body class="responsive">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings dark cover-container responsive present has-light-background fitted" data-background-color="#4ea9e2" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="mechanismofcontrol">Mechanism of Control</h4><h1 id="controllingarduinofromacomputer">Controlling Arduino from a Computer</h1></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark cover-container responsive present has-light-background fitted" data-background-color="#4292d0" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="lastweek:">last week:</h1></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark cover-container responsive present has-dark-background fitted" data-background-color="#377cbe" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="mechanismofcontrol">Mechanism of Control</h4><h1 id="arduinoserialcommunication">Arduino Serial Communication</h1>
+
+<h3 id="bestpractices">Best Practices</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark cover-container responsive present has-dark-background fitted" data-background-color="#4672b5" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="gettingdatafromour">Getting data from our</h4><h1 id="arduinoto">Arduino to</h1>
+
+<h3 id="useonour">use on our</h3>
+
+<h1 id="computer">Computer</h1></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark cover-container responsive present has-dark-background fitted" data-background-color="#6f74b4" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h1 id="today:">today:</h1></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark cover-container responsive present has-light-background fitted" data-background-color="#9977b3" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-cover" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 class="kicker" id="gettingdatafromour">Getting data from our</h4><h1 id="computerto">Computer to</h1>
+
+<h3 id="useonour">use on our</h3>
+
+<h1 id="arduino">Arduino</h1></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark v-split-container responsive present has-dark-background fitted" data-background-color="#af5996" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="lessonobjective1">Lesson Objective 1</h4></div>
+        <div style=""><h3 id="understandhowacomputercancontrolanarduinoviaserialcommunication">Understand how a computer can control an Arduino via serial communication</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-dark-background fitted" data-background-color="#c63c79" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="lessonobjective2">Lesson Objective 2</h4></div>
+        <div style=""><h3 id="designandimplementcustomserialcommandprotocols">Design and implement custom serial command protocols</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-dark-background fitted" data-background-color="#d02e5d" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="lessonobjective2">Lesson Objective 2</h4></div>
+        <div style=""><h3 id="buildreliablebidirectionalcommunicationsystems">Build reliable, bidirectional communication systems</h3></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-dark-background fitted" data-background-color="#cd2f41" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="directionalityofserialcommunication">Directionality of Serial Communication</h4></div>
+        <div style=""><h2 id="txrx:"><strong>TX/RX</strong>:</h2>
+
+<h2 id="computertx→arduinorx">Computer (TX) → Arduino (RX)</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark full-image-container responsive present has-dark-background fitted" data-background-color="#cb3026" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-full-image media-grid" style="width: 100%; font-size: 1rem;">
+        <figure style=""><img src="images/Arduino_Uno.jpg" class=" position-center-center"></figure>
+        
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark default-container responsive present has-dark-background fitted" data-background-color="#c1412a" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><p><strong>Bidirectional communication is possible</strong>: </p>
+
+<p>Handle carefully to avoid collision</p>
+
+<p><strong>Example</strong>: PC sends <code class="hljs apache"><span class="hljs-attribute">L</span>:<span class="hljs-number">1</span>\n</code> → Arduino turns on LED</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark v-split-container responsive present has-dark-background fitted" data-background-color="#b7522e" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="characteristicsoftheserialprotocol">Characteristics of the Serial Protocol</h4></div>
+        <div style=""><p><strong>Baud rate</strong>: </p>
+
+<p>e.g. 9600, 115200 (must match)</p>
+
+<p><strong>Data format</strong>: </p>
+
+<p>1 start bit, 8 data bits, optional parity, 1 stop bit</p>
+
+<p><strong>Delimiters</strong>: </p>
+
+<p><code class="hljs livescript"><span class="hljs-string">\n</span></code> mark message ends, <code class="hljs">,</code> to split messages</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-dark-background fitted" data-background-color="#bb613a" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h4 id="parsingcommandsonarduino">Parsing Commands on Arduino</h4></div>
+        <div style=""><p>Read data: </p>
+
+<p><code class="hljs arduino"><span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">read</span>()</code>, <code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">readStringUntil</span><span class="hljs-params">(<span class="hljs-string">'\n'</span>)</span></span></code>, <code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">parseInt</span><span class="hljs-params">()</span></span></code></p>
+
+<p>Design simple commands: <code class="hljs apache"><span class="hljs-attribute">L</span>:<span class="hljs-number">1</span></code>, <code class="hljs apache"><span class="hljs-attribute">M</span>:<span class="hljs-number">100</span></code>, <code class="hljs vbnet"><span class="hljs-symbol">B:</span><span class="hljs-keyword">ON</span></code></p>
+
+<p><em>Advanced:</em> Implement state machines for complex control</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#cd6e4e" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.859rem;">
+        <div style=""><h4 id="interfacestosendcommands">Interfaces to Send Commands</h4></div>
+        <div style=""><p><strong>Processing</strong>: </p>
+
+<p><code class="hljs delphi">myPort.<span class="hljs-keyword">write</span>(<span class="hljs-string">'message'</span>)</code> for example <code class="hljs lsl"><span class="hljs-string">"L:1<span class="hljs-subst">\n</span>"</span></code></p>
+
+<p><strong>Python:</strong> </p>
+
+<p><code class="hljs ebnf"><span class="hljs-attribute">pyserial</span></code> Easy script-based control</p>
+
+<p><strong>TouchDesigner</strong>: </p>
+
+<p><code class="hljs crmsh">Serial DAT <span class="hljs-keyword">node</span><span class="hljs-title"></span></code></p>
+
+<p><strong>Max/MSP</strong>: <code class="hljs ebnf"><span class="hljs-attribute">serial</span></code> object </p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark section-container responsive present has-light-background fitted" data-background-color="#e07b63" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="designingacommunicationprotocol">Designing a Communication Protocol</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark default-container responsive present has-light-background fitted" data-background-color="#e28c52" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><ul>
+<li>Use <strong>human-readable ASCII</strong> for prototyping</li>
+<li>Add <strong>headers</strong>, <strong>delimiters</strong>, and <strong>checks</strong></li>
+<li><p>Feedback mechanisms with messages such as: </p>
+<code class="hljs ebnf"><span class="hljs-attribute">OK</span></code>, <code class="hljs ebnf"><span class="hljs-attribute">ERR</span></code>, <code class="hljs avrasm"><span class="hljs-symbol">VAL:</span>xxx</code></li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#e49d42" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="syncanderrorhandling">Sync and Error Handling</h4></div>
+        <div style=""><p><strong>Avoid overflow</strong>: </p>
+
+<p>Don’t spam commands</p>
+
+<p>Use <strong>acknowledgments</strong>: Wait for <code class="hljs ebnf"><span class="hljs-attribute">OK</span></code></p>
+
+<p>Add <strong>timeouts</strong> and <strong>fallbacks</strong></p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark grid-container responsive present has-light-background fitted" data-background-color="#dda93b" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-grid grid-items-3 " style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="safetyandrobustness">Safety and Robustness</h4></div><div style=""><p><strong>Validate commands</strong> on Arduino before executing</p>
+
+<p><strong>Set limits</strong> on input values</p></div><div style=""><p><strong>Example:</strong> LED should not blink faster than the hardware can handle</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#ccaf3d" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 0.953rem;">
+        <div style=""><h2 id="historicaltechnologicalcontext">Historical &amp; Technological Context</h2></div>
+        <div style=""><ul>
+<li><strong>RS-232 (1960s)</strong>: First widespread serial standard</li>
+<li><strong>Used in</strong>: Mainframes, modems, teletypewriters</li>
+<li><strong>Legacy</strong>: Foundation of USB and embedded interfaces</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark section-container responsive present has-light-background fitted" data-background-color="#bcb540" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-section" style="width: 100%; font-size: 1rem;">
+        <div style="">
+          <h3 id="whyserialisstillrelevant">Why Serial Is Still Relevant</h3>
+        </div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#94ac46" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="whyserialisstillrelevant">Why Serial Is Still Relevant</h4></div>
+        <div style=""><p><strong>Standard on microcontrollers</strong></p>
+
+<p><strong>Debug-friendly</strong>: Human-readable and easy to test</p>
+
+<p><strong>Works everywhere</strong>: From Arduino IDE to industrial robots</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#6ca34d" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h4 id="serialinpracticetoday">Serial in Practice Today</h4></div>
+        <div style=""><p><strong>Arduino</strong>: </p>
+
+<p>Serial Monitor, Serial Plotter, built-in libraries</p>
+
+<p><strong>Industry</strong>: CNC, HVAC systems, etc. </p>
+
+<p><strong>IoT</strong>: Serial bridging over Wi-Fi (ESP32, Pico W)</p></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#56a15f" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><p><strong>USB</strong> = built on serial signalling</p>
+
+<p><strong>MIDI</strong> = serial for music devices</p>
+
+<p><strong>Bluetooth SPP</strong> = serial over wireless</p>
+
+<p><strong>TCP Serial Bridge</strong> = serial over networks</p></div>
+        <div style=""><h2 id="relatedprotocols">Related Protocols</h2></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark v-split-container responsive present has-light-background fitted" data-background-color="#52a47b" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-v-split" style="width: 100%; font-size: 1rem;">
+        <div style=""><h2 id="takeaways">Takeaways</h2></div>
+        <div style=""><ul>
+<li>Serial is old but powerful and flexible</li>
+<li>Clear protocols = clean interactions</li>
+<li>Think like both a hardware and software designer</li>
+</ul></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+</section><section class="variable-size-headings dark default-container responsive present has-light-background fitted" data-background-color="#4ea998" data-updated="true" style="display: grid;">
+
+      <div class="header"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      <div class="layout-default" style="width: 100%; font-size: 1rem;">
+        <div style=""><blockquote class="is-single-quote"><div class="line"></div>
+<p>“Control is not domination — it’s a conversation across systems.”</p>
+<div class="line"></div></blockquote></div>
+      </div>
+      <div class="footnotes"></div>
+      <div class="footer"><div class="leading"></div><div class="middle"></div><div class="trailing"></div></div>
+      
+</section></div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/pptxgen.min.js"></script>
+<script src="engine/pfill.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
